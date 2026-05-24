@@ -256,13 +256,13 @@ uv run python scripts/convert_to_onnx.py checkpoints/cnn-epoch=XX-val_loss=X.XXX
 Через commands.py
 
 ```bash
-uv run python commands.py infer /path/to/image.jpg
+uv run python commands.py infer imgs/leaf_img.jpg
 ```
 
 Через infer.py (публичный API)
 
 ```bash
-uv run python infer.py /path/to/image.jpg
+uv run python infer.py imgs/leaf_img.jpg
 ```
 
 Пример вывода:
@@ -314,19 +314,19 @@ curl -s http://localhost:8000/v2/health/ready
 
 ```bash
 # baseline
-uv run python scripts/triton_test.py /path/to/leaf.jpg
+uv run python scripts/triton_test.py imgs/leaf_img.jpg
 # CNN
 
-uv run python scripts/triton_test.py /path/to/leaf.jpg \
+uv run python scripts/triton_test.py imgs/leaf_img.jpg \
   --model_name leaf_classifier_cnn
 ```
 
 Если хотим вывести top_k наиболее вероятных диагнозов:
 
 ```bash
-uv run python scripts/triton_test.py /path/to/leaf.jpg \
+uv run python scripts/triton_test.py imgs/leaf_img.jpg \
   --server_url localhost:8000 \
-  --model_name leaf_classifier_baseline \
+  --model_name leaf_classifier_cnn \
   --top_k 5
 ```
 
