@@ -230,10 +230,10 @@ uv run mlflow ui --port 8080
 Checkpoint лучшей модели в формате ckpt — в директорию`checkpoints/`. в формате `{name}-epoch={epoch}-val_loss={val_loss}.ckpt`.
 
 Результаты обучения для baseline vanilla CNN:
-![Результаты обучения для baseline vanilla CNN:](imgs/cnn_metrics.jpg)
+![Результаты обучения для baseline vanilla CNN:](imgs/baseline_metrics.jpg)
 
 Результаты обучения для CNN+CE:
-![Результаты обучения для CNN+CE:](imgs/baseline_metrics.jpg)
+![Результаты обучения для CNN+CE:](imgs/cnn_metrics.jpg)
 
 ---
 
