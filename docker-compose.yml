@@ -1,0 +1,17 @@
+services:
+  triton:
+    image: nvcr.io/nvidia/tritonserver:24.05-py3
+    platform: linux/amd64
+    ports:
+      - "8000:8000" # HTTP
+      - "8001:8001" # gRPC
+      - "8002:8002" # Metrics
+    volumes:
+      - ./triton_models:/models
+    command: tritonserver --model-repository=/models --log-verbose=0
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/v2/health/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s

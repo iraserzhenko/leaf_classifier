@@ -1,0 +1,26 @@
+name: "leaf_classifier_baseline"
+platform: "onnxruntime_onnx"
+max_batch_size: 0
+
+input [
+  {
+    name: "input"
+    data_type: TYPE_FP32
+    dims: [-1, 3, 256, 256]
+  }
+]
+
+output [
+  {
+    name: "output"
+    data_type: TYPE_FP32
+    dims: [-1, 38]
+  }
+]
+
+instance_group [
+  {
+    count: 1
+    kind: KIND_CPU
+  }
+]

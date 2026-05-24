@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.env
+.venv
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+
+# Data and models
+data/
+checkpoints/
+artifacts/
+*.pth
+*.pt
+*.onnx
+*.trt
+*.pkl
+
+# Hydra outputs
+outputs/
+.hydra/
+multirun/
+
+# MLflow
+mlruns/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# uv
+.python-version

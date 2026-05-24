@@ -1,0 +1,2 @@
+name: baseline
+dropout_rate: 0.3

@@ -1,0 +1,8 @@
+defaults:
+  - data: default
+  - model: cnn
+  - training: default
+  - logging: mlflow
+  - _self_
+
+seed: 42
