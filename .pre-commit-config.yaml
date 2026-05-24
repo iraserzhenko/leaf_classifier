@@ -22,4 +22,4 @@ repos:
     hooks:
       - id: prettier
         types_or: [yaml, json, markdown]
-        exclude: "^configs/"
+        exclude: "^configs/|^README|.md$"
