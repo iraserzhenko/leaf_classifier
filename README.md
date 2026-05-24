@@ -229,6 +229,11 @@ uv run mlflow ui --port 8080
 Также в конце цикла обучения модели в формате ONNX и файл class_names.json сохраняются в директорию `artifacts/`.
 Checkpoint лучшей модели в формате ckpt — в директорию`checkpoints/`. в формате `{name}-epoch={epoch}-val_loss={val_loss}.ckpt`.
 
+
+![Результаты обучения для baseline vanilla CNN:](imgs/cnn_metrics.jpg)
+
+![Результаты обучения для CNN+CE:](imgs/baseline_metrics.jpg)
+
 ---
 
 ## Production Preparation
